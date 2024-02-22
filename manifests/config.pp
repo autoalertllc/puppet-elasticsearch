@@ -121,7 +121,7 @@ class elasticsearch::config {
 
       # Trust CA Certificate
       java_ks { 'elasticsearch_ca':
-        ensure       => 'latest',
+        ensure       => 'present',
         certificate  => $elasticsearch::ca_certificate,
         target       => $_keystore_path,
         password     => $elasticsearch::keystore_password,
